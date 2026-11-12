@@ -12,6 +12,13 @@ Projeto CitizenTech da equipe Bug Hunters para a Global Solution FIAP 2026. Anal
 
 O projeto está na etapa de preparação de dados e visualização. Não há modelo treinado/validado, API, autenticação, envio à prefeitura ou alertas automáticos nesta versão. Dados simulados das versões anteriores não fazem parte deste repositório.
 
+
+## Dashboard completo do 2º trimestre
+
+O relatório PDF fornecido foi integrado em [Dashboard completo — 2º trimestre](app/dashboard_2trimestre.html), com visualização embutida e opção de download. No GitHub, abra diretamente o [PDF](docs/dashboard_2_trimestre_2026.pdf); para a interface HTML, baixe o projeto ou use o servidor local descrito abaixo.
+
+O documento foi preservado sem alterações. Seus números referem-se a um recorte diferente da base versionada e ainda precisam ser conferidos com o CSV e notebook correspondentes. A integração não confirma treinamento dos modelos nem altera os indicadores verificados do 1º trimestre. Consulte a [nota de integração](docs/nota_dashboard_2_trimestre.md).
+
 ## Como visualizar
 
 Os CSVs completos e o banco SQLite são distribuídos sem perda em arquivos `.gz`. Na raiz do projeto, execute `python scripts/descompactar_dados.py` para restaurá-los antes de acessar os links de dados do painel ou abrir o banco. O painel em si pode ser aberto imediatamente.
