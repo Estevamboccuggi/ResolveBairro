@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+data/raw/
+data/dados_reais.json
+data/LEIA-ME.md
+data/painel_ODS9_11.html
+dist/

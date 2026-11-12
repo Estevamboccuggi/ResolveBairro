@@ -1,0 +1,13 @@
+﻿indicador,valor,unidade,situacao,ods,metodo
+Total de chamados no recorte,81350,registros,CALCULADO,9;11,Quantidade de linhas dos quatro serviços selecionados; sem deduplicação por ausência de protocolo.
+Solicitações finalizadas,88.71,%,CALCULADO,9;11,Status Finalizada / todos os registros. Não comprova solução efetiva.
+Tempo médio até finalização,8.64,dias corridos,CALCULADO,9;11,Finalização menos abertura; somente Finalizada com datas válidas e duração não negativa.
+Chamados pendentes,8354,registros,CALCULADO,9;11,Status Aberto ou Em Andamento no snapshot publicado; não situação atual.
+Finalização dentro do prazo,,%,INDISPONÍVEL,9;11,Sem prazo oficial por serviço e versão temporal na fonte selecionada.
+Chamados por distrito,96,distritos identificados,CALCULADO,11,Contagens detalhadas em indicadores_territoriais.csv; distrito não equivale a bairro.
+MAE do modelo,,dias,NÃO AVALIADO,9,Exige treinamento e previsões fora da amostra; não há modelo avaliado neste pacote.
+Satisfação dos cidadãos,,%,INDISPONÍVEL,11,Não consta no CSV de solicitações selecionado. Avaliação do canal não equivale à satisfação com a resolução.
+Risco de atraso,,probabilidade,NÃO AVALIADO,9;11,"Exige prazo de referência, modelo e validação; nenhum risco foi inventado."
+Reincidência confirmada,,registros,INDISPONÍVEL,11,"Sem identificador persistente do problema, não é possível confirmar reincidência."
+Novos registros no mesmo ponto após finalização,16248,candidatos,PROXY,11,"Mesmo serviço, logradouro, número e distrito; nova abertura 1 a 90 dias depois de finalização anterior. Não confirma mesmo problema."
+Diferenças territoriais,,dias,DESCRITIVO,11,Compare tempos por distrito E serviço no arquivo territorial. Diferenças não demonstram discriminação nem causalidade.
