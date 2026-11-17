@@ -10,7 +10,7 @@ flowchart LR
     D --> E[SQLite e CSV]
     E --> F[Indicadores gerais e por distrito/serviço]
     F --> G[Painel HTML estático]
-    D --> H[Base para futuros experimentos de ML]
+    D --> H[Base analítica e notebook ML executado]
 ```
 
 O tratamento filtra quatro serviços, padroniza datas, preserva os status e calcula duração somente para solicitações finalizadas com datas válidas. Dados sem suporte ficam nulos. A proveniência é registrada com a URL e hash da fonte. Não existe ingestão contínua.
@@ -19,7 +19,7 @@ O SQLite armazena chamados e metadados, com views de fila pendente e treinamento
 
 ## Componentes propostos, ainda não implementados
 
-1. Notebook com pelo menos dois modelos, validação temporal e avaliação final fora da amostra.
+1. Monitoramento e nova avaliação em outro período. O notebook com dois modelos, baseline, validação temporal e teste já foi executado em entrega_tecnica/.
 2. Serviço de inferência com modelo e pré-processamento versionados, disponível somente depois da validação.
 3. API para cadastro, acompanhamento e consulta de indicadores, com autorização e persistência transacional.
 4. Interface conectada à API e controles de acesso para gestão.
