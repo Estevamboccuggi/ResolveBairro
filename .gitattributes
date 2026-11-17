@@ -1,0 +1,3 @@
+entrega_tecnica/*.csv -text whitespace=cr-at-eol
+*.ipynb -text whitespace=cr-at-eol
+*.png binary
