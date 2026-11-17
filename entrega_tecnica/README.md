@@ -1,0 +1,4 @@
+# Entrega técnica - ResolveBairro
+Abra ResolveBairro_ML.ipynb: todas as células já foram executadas e as saídas foram preservadas. Para repetir, instale requirements.txt, selecione o kernel correspondente e execute do início ao fim com este diretório como pasta atual. CSV inclui somente as variáveis analíticas, sem endereços ou contatos.
+Fonte e hash do bruto constam em fontes_e_metodologia.json. Hash do CSV analítico e contagens desta execução constam no notebook e resumo_execucao.json. Dados obtidos do repositório Estevamboccuggi/ResolveBairro, commit c4ebd7c33b666e5925433ee1e9de303dd848094d. CSV local conferido byte a byte por SHA256 contra a versão gzip do GitHub.
+Resultados deste novo experimento substituem números sem artefatos reproduzíveis. Sem integração operacional, envio à prefeitura ou garantia de prazo. O notebook contém os dois modelos supervisionados, baseline, CV temporal, avaliação reservada, gráficos e discussão de limitações.
