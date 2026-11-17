@@ -38,3 +38,8 @@ Entradas: serviço/categoria, distrito, mês e dia da semana da abertura. Exclui
 
 ## Dados e validação
 Dados públicos tratados sem nomes, contatos, texto livre, coordenadas e endereços no produto final. Datas, serviço, canal e território preservados da fonte; chaves técnicas e métricas derivadas identificadas. UTF-8 com BOM nos CSV, separador vírgula, datas ISO. Conferidos contagens, unicidade das chaves, integridade SQLite e durações não negativas da base ML.
+
+## Avaliação supervisionada executada
+O pacote `entrega_tecnica/` contém o notebook .ipynb executado, base CSV e métricas. Random Forest selecionado por CV MAE temporal; teste reservado de 15.152 registros. Fonte: entrega_tecnica/resultados_modelos.csv. Não implica uso operacional. Treino: 48.330, teste: 15.152, corte em 13/03/2026. CV com quatro divisões temporais e ajuste de transformações dentro do treino de cada fold. Apenas rótulos conhecidos antes da validação participam do ajuste. Resultado selecionado: MAE 5,468656 dias, RMSE 14,385082, R² -0,081547 no teste. A seleção por CV não foi refeita após observar o teste. A baseline mediana tem MAE 5,752310 dias. R² negativo impede apresentar o modelo como validado para implantação. O conjunto de finalizados exige cautela sobre censura e representatividade.
+
+Os scripts de preparação da fonte recompõem os indicadores descritivos e não treinam automaticamente os modelos. Ao regenerar dados, executar novamente o notebook antes de atualizar o MAE publicado.

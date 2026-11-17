@@ -8,9 +8,9 @@ Projeto CitizenTech da equipe Bug Hunters para a Global Solution FIAP 2026. Anal
 - Painel HTML com indicadores e comparação por distrito e serviço.
 - Banco SQLite e exportações CSV para análise e integração.
 - Scripts Python reproduzíveis para baixar a fonte oficial e preparar a base.
-- Base de 72.168 registros finalizados com duração válida, preparada para futuros experimentos de regressão.
+- Base de 72.159 registros finalizados com duração válida e notebook supervisionado executado; nove das 72.168 finalizações operacionais não integram a base válida de duração.
 
-O projeto está na etapa de preparação de dados e visualização. Não há modelo treinado/validado, API, autenticação, envio à prefeitura ou alertas automáticos nesta versão. Dados simulados das versões anteriores não fazem parte deste repositório.
+O projeto inclui preparação de dados, visualização e experimento supervisionado executado em `entrega_tecnica/`. Não há API de inferência, autenticação, envio à prefeitura ou alertas automáticos. Dados simulados das versões anteriores não fazem parte desta versão.
 
 
 ## Dashboard completo do 2º trimestre
@@ -45,7 +45,7 @@ Acesse http://localhost:8000/app/ . O banco para integração está em `data/res
 
 Status histórico: o portal informa extração em 07/08/2026. Finalização administrativa não comprova que o cidadão teve seu problema resolvido. Distrito não equivale a bairro. Os indicadores se referem exclusivamente ao recorte selecionado, não a todos os serviços da cidade.
 
-Prazo oficial, satisfação, MAE e risco de atraso permanecem sem valor quando não há dados ou modelo avaliado. Repetições no mesmo ponto são apenas candidatas, sem comprovação de reincidência. Consulte as definições completas em [metodologia](docs/metodologia.md).
+Prazo oficial, satisfação e risco de atraso permanecem sem valor por falta de suporte. O MAE experimental está disponível na avaliação temporal do notebook. Repetições no mesmo ponto são apenas candidatas, sem comprovação de reincidência. Consulte as definições completas em [metodologia](docs/metodologia.md).
 
 ## Estrutura
 
@@ -77,7 +77,7 @@ A fonte original tem aproximadamente 119 MiB e fica fora do Git. O SHA-256 é co
 
 Fonte SP156 → download com verificação → tratamento em Python → SQLite/CSV → indicadores → painel HTML. Veja [arquitetura](docs/arquitetura.md).
 
-Alvo proposto: dias entre abertura e finalização administrativa. Preditores candidatos: serviço, distrito e calendário da abertura. Não usar status final, data de finalização ou informações futuras como entrada. Em cada corte de treino, apenas rótulos já conhecidos naquela data podem participar. A comparação de modelos e a validação temporal ainda precisam ser executadas; este repositório não apresenta métricas preditivas.
+Alvo proposto: dias entre abertura e finalização administrativa. Preditores candidatos: serviço, distrito e calendário da abertura. Não usar status final, data de finalização ou informações futuras como entrada. Em cada corte de treino, apenas rótulos já conhecidos naquela data podem participar. A comparação e a validação temporal foram executadas no notebook anexo. Random Forest foi selecionado pelo MAE de validação: 2,403179 dias. Teste: MAE 5,468656 dias, RMSE 14,385082 dias e R² -0,081547. Baseline mediana: Teste MAE 5,752310 dias. Resultados experimentais, sem uso operacional.
 
 ## ODS e uso responsável
 
@@ -93,3 +93,19 @@ São relações propostas pelo projeto, não indicadores oficiais da ONU nem com
 - [ODS 11 — ONU](https://sdgs.un.org/goals/goal11)
 
 Dados públicos atribuídos à Prefeitura de São Paulo. Nenhuma licença nova sobre os dados de terceiros é concedida por este repositório; consulte os termos da fonte.
+
+## Entrega técnica executada
+Abra [ResolveBairro_ML.ipynb](entrega_tecnica/ResolveBairro_ML.ipynb), com todas as células executadas e saídas visíveis. [Dataset CSV](entrega_tecnica/base_ml_real.csv), [métricas exatas](entrega_tecnica/resultados_modelos.csv), requisitos e gráficos acompanham o notebook. A versão HTML é somente uma cópia de leitura, não substitui o .ipynb. Treino: 48.330; teste: 15.152; 8.677 casos anteriores ao corte sem rótulo conhecido foram excluídos do treino. O corte é 13/03/2026 e a CV tem quatro divisões por dias únicos com disponibilidade temporal do rótulo.
+
+## Equipe e apresentação
+Turma 2TSCOA. Responsável: Estevam Boccuggi Junior — RM557628.
+
+- Bruno de Oliveira Costa — RM565381
+- Daniel Souza Amador Sampaio — RM565580
+- Enzo Fermento Campos Corrêa — RM564172
+- Estevam Boccuggi Junior — RM557628
+- Marco Antonio Brodwolf Bernardo — RM563511
+
+[Sobre e equipe](app/sobre.html) · [Machine Learning](app/machine-learning.html) · [Vídeo informado pelo grupo](https://www.youtube.com/watch?v=bzsI-_cEFIU). URL mantida a pedido do usuário. Vídeo publicado conserva métricas anteriores; usar o notebook como fonte da execução revisada. MP4 corrigido entregue separadamente.
+
+O site Lovable possui publicação independente deste repositório. Os dados para integração estão em `data/publicacao_projeto.json`; publicar estes commits não modifica automaticamente o domínio lovable.app.

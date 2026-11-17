@@ -1,0 +1,34 @@
+{
+  "fonte": "https://dados.prefeitura.sp.gov.br/dataset/dados-do-sp156",
+  "download": "https://dados.prefeitura.sp.gov.br/dataset/0aecfa2b-aa3a-40d4-8183-0d4351b7fd0a/resource/75105148-4efd-48f3-8ae0-fc6c2adf7060/download/arquivo-final-1-trim-26.csv",
+  "sha256_original": "5305b2b13630b05bdd396a5c3e1185cd7d952eec681e07eed957868783e7aa21",
+  "data_preparacao": "2026-11-11",
+  "origem": "REAL",
+  "municipio": "São Paulo/SP",
+  "periodo_aberturas": [
+    "2026-01-01",
+    "2026-03-31"
+  ],
+  "snapshot": "Portal declara extração em 2026-08-07; não representa o estado atual.",
+  "linhas_fonte": 577989,
+  "linhas_recorte": 81350,
+  "servicos_incluidos": {
+    "Tapa-buraco": "Buraco na via",
+    "Tapa-buraco em faixa exclusiva ou corredor de ônibus": "Buraco na via",
+    "Entulho e grandes objetos em via pública - solicitar remoção": "Resíduos em via pública",
+    "Denunciar descarte irregular de entulho e outros resíduos em área pública": "Descarte irregular"
+  },
+  "problemas_datas": 0,
+  "status": {
+    "Finalizada": 72168,
+    "Aberto": 8354,
+    "Cancelada": 828
+  },
+  "observacoes": [
+    "IDs são chaves técnicas por linha de origem, não protocolos oficiais.",
+    "Não foram criados eventos intermediários nem dados pessoais.",
+    "Finalização administrativa não é comprovação de resolução efetiva.",
+    "Iluminação pública não encontrada neste recorte; não foram fabricados chamados dessa categoria.",
+    "Indicadores operacionais associados aos ODS, não indicadores oficiais da ONU."
+  ]
+}

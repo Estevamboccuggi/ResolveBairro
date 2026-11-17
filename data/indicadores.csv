@@ -1,11 +1,11 @@
-﻿indicador,valor,unidade,situacao,ods,metodo
+indicador,valor,unidade,situacao,ods,metodo
 Total de chamados no recorte,81350,registros,CALCULADO,9;11,Quantidade de linhas dos quatro serviços selecionados; sem deduplicação por ausência de protocolo.
 Solicitações finalizadas,88.71,%,CALCULADO,9;11,Status Finalizada / todos os registros. Não comprova solução efetiva.
 Tempo médio até finalização,8.64,dias corridos,CALCULADO,9;11,Finalização menos abertura; somente Finalizada com datas válidas e duração não negativa.
 Chamados pendentes,8354,registros,CALCULADO,9;11,Status Aberto ou Em Andamento no snapshot publicado; não situação atual.
 Finalização dentro do prazo,,%,INDISPONÍVEL,9;11,Sem prazo oficial por serviço e versão temporal na fonte selecionada.
 Chamados por distrito,96,distritos identificados,CALCULADO,11,Contagens detalhadas em indicadores_territoriais.csv; distrito não equivale a bairro.
-MAE do modelo,,dias,NÃO AVALIADO,9,Exige treinamento e previsões fora da amostra; não há modelo avaliado neste pacote.
+MAE do modelo,5.468655913538537,dias,AVALIADO FORA DA AMOSTRA,9,Random Forest selecionado por CV MAE temporal; teste reservado de 15.152 registros. Fonte: entrega_tecnica/resultados_modelos.csv. Não implica uso operacional.
 Satisfação dos cidadãos,,%,INDISPONÍVEL,11,Não consta no CSV de solicitações selecionado. Avaliação do canal não equivale à satisfação com a resolução.
 Risco de atraso,,probabilidade,NÃO AVALIADO,9;11,"Exige prazo de referência, modelo e validação; nenhum risco foi inventado."
 Reincidência confirmada,,registros,INDISPONÍVEL,11,"Sem identificador persistente do problema, não é possível confirmar reincidência."
