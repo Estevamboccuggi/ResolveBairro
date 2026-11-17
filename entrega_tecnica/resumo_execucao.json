@@ -1,0 +1,36 @@
+{
+  "selecionado_por_cv": "Random Forest",
+  "treino": 48330,
+  "teste": 15152,
+  "excluidos_sem_rotulo_corte": 8677,
+  "metricas": [
+    {
+      "modelo": "Baseline mediana",
+      "CV_MAE": 2.4290018407218876,
+      "CV_RMSE": 4.796490616428961,
+      "CV_R2": -0.17646101799947284,
+      "teste_MAE": 5.752309926082366,
+      "teste_RMSE": 14.820901487700771,
+      "teste_R2": -0.14807395396755219
+    },
+    {
+      "modelo": "Decision Tree",
+      "CV_MAE": 2.4264301012541414,
+      "CV_RMSE": 4.420924298625379,
+      "CV_R2": -0.13169704970661503,
+      "teste_MAE": 5.475676466667532,
+      "teste_RMSE": 14.385283674531937,
+      "teste_R2": -0.08157710168403742
+    },
+    {
+      "modelo": "Random Forest",
+      "CV_MAE": 2.403178906596582,
+      "CV_RMSE": 4.3956505621600215,
+      "CV_R2": -0.10715755779965533,
+      "teste_MAE": 5.468655913538537,
+      "teste_RMSE": 14.385081820823206,
+      "teste_R2": -0.0815467486062027
+    }
+  ],
+  "base_sha256": "60b3c567ca353181f0f348e9f91e67a8a7fae71371a697021bf40722b017bb27"
+}
