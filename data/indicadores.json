@@ -84,11 +84,11 @@
     },
     {
       "indicador": "MAE do modelo",
-      "valor": null,
+      "valor": 5.468655913538537,
       "unidade": "dias",
-      "situacao": "NÃO AVALIADO",
+      "situacao": "AVALIADO FORA DA AMOSTRA",
       "ods": "9",
-      "metodo": "Exige treinamento e previsões fora da amostra; não há modelo avaliado neste pacote."
+      "metodo": "Random Forest selecionado por CV MAE temporal; teste reservado de 15.152 registros. Fonte: entrega_tecnica/resultados_modelos.csv. Não implica uso operacional."
     },
     {
       "indicador": "Satisfação dos cidadãos",
